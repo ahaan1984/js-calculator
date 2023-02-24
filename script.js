@@ -1,25 +1,17 @@
-function add(a,b) {
-    return parseFloat(a)+parseFloat(b)              /*The parseFloat() converts string to float.*/
-}
-function subtract(a,b){
-    return parseFloat(a)-parseFloat(b)
-}
-function multiply(a,b){
-    return parseFloat(a)*parseFloat(b)
-}
-function divide(a,b){
-    return parseFloat(a)/parseFloat(b)
+var display = document.getElementById("display");
+
+function insert(value) {
+  display.value += value;
 }
 
-function operate(operator,firstArg,secondArg){
-    switch(operator){
-        case '+':
-            return add(firstArg,secondArg);
-        case '-':
-            return subtract(firstArg,secondArg);
-        case '*':
-            return multiply(firstArg,secondArg);
-        case '/':
-            return divide(firstArg,secondArg);
-    }   
+function clearDisplay() {
+  display.value = "";
+}
+
+function backspace() {
+  display.value = display.value.slice(0, -1);
+}
+
+function calculate() {
+  display.value = eval(display.value);
 }

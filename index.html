@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title> Calculator </title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script src="script.js"></script>
-    </head>
-    <body>
-        <div class="output">
-            <div class="previous-operand">123 +</div>
-            <div class="current-operand">456</div>
-        </div>
-        <div class="keys">
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button class="operator" data-action="Divide">/</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button class="operator" data-action="multiply">*</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button class="operator" data-action="subtract">-</button>
-            <button data-action="clear">AC</button>
-            <button>0</button>
-            <button class = "operator" data-action="result">=</button>
-            <button class="operator" data-action="add">+</button>
-        </div>
-    </body>
+  <head>
+    <title>Calculator with Buttons</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="display">
+        <input type="text" id="display" readonly>
+      </div>
+      <div class="buttons">
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="backspace()">&#8592;</button>
+        <button onclick="insert('%')">%</button>
+        <button onclick="insert('/')">/</button>
+        <button onclick="insert('7')">7</button>
+        <button onclick="insert('8')">8</button>
+        <button onclick="insert('9')">9</button>
+        <button onclick="insert('*')">*</button>
+        <button onclick="insert('4')">4</button>
+        <button onclick="insert('5')">5</button>
+        <button onclick="insert('6')">6</button>
+        <button onclick="insert('-')">-</button>
+        <button onclick="insert('1')">1</button>
+        <button onclick="insert('2')">2</button>
+        <button onclick="insert('3')">3</button>
+        <button onclick="insert('+')">+</button>
+        <button onclick="insert('0')">0</button>
+        <button onclick="insert('.')">.</button>
+        <button onclick="calculate()">=</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
-
-<button>5</button>
