@@ -1,6 +1,6 @@
 var display = document.getElementById("display");
 
-function insert(value) {
+function addToDisplay(value) {
   display.value += value;
 }
 
@@ -8,10 +8,19 @@ function clearDisplay() {
   display.value = "";
 }
 
-function backspace() {
-  display.value = display.value.slice(0, -1);
+function calculate() {
+  var result = eval(display.value);
+  display.value = result;
 }
 
-function calculate() {
-  display.value = eval(display.value);
-}
+function dark(){
+    document.getElementById("lnk").setAttribute('href', 'dark.css');
+ }
+
+ function light(){
+    document.getElementById("lnk").setAttribute('href', 'light.css');
+ }
+
+ function ocean(){
+    document.getElementById("lnk").setAttribute('href', 'ocean.css');
+ }
